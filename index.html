@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Example</title>
+    <script type="text/javascript">
+        console.log("Hello World"); //printing hello world on console
+//Right click -> Inspect -> Console
+        //Type this in notepad and save it .html and open it browser
+//JSON Object
+        var my; // object named my
+        my = {
+            "name" : 'Kaushi', // Kaushi String assign to property name
+            "age" : 30,     // 30 value assign to age
+        };
+        console.log(my.name+ " " + my.age); //printing value in console
+//
+        var m1;  // object in javascript
+        m1 = {
+            "name" : 'Kaushi',
+            "age" : 30,
+        };
+        console.log(m1.name+ " " + m1.age);
+
+        var Vehicle = {
+            vehicleName : "Nisan",
+            getVehicleName : function(){
+                return this.vehicleName;
+            }
+        }; // creating object as Vehicle
+
+        function printVehicleName() {
+            console.log(Vehicle.getVehicleName());
+        };
+        printVehicleName();
+    </script>
+</head>
+<body>
+
+</body>
+</html>
