@@ -11,11 +11,16 @@
         console.log(this.vehicleName);
     }
     console.log(this);
-    printVehicleNameOuter();
     var vehicle = {
         vehicleName: 'Nissan',
-        printVehicleNameInner: printVehicleNameOuter
+        printVehicleNameInner: function () {
+            return function () {
+                console.log(this.vehicleName);
+            }
+        }
     };
+    var execute = vehicle.printVehicleNameInner();
+    execute();
     vehicle.printVehicleNameInner();
 </script>
 
