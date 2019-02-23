@@ -6,6 +6,7 @@
 </head>
 <body>
 <script type = "text/javascript">
+    // 01
     var vehicleName = 'Toyota';
     function printVehicleNameOuter() {
         console.log(this.vehicleName);
@@ -21,7 +22,21 @@
     };
     var execute = vehicle.printVehicleNameInner();
     execute();
+    execute.call(vehicle);
+    var evecute1 = vehicle.printVehicleNameInner().bind(vehicle);
+    evecute1();
     vehicle.printVehicleNameInner();
+    // 02
+
+    function taxCalculator(tax){
+        var taxPercentage = tax;
+        return function(amount){
+            return amount * taxPercentage / 100;
+        }
+    }
+    var calculator = taxCalculator(10);
+    console.log(calculator(90));
+
 </script>
 
 </body>
